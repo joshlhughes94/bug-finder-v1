@@ -19,14 +19,25 @@ export interface ScanIssue {
   url: string;
   title: string;
   message: string;
+
+  // Optional file-based path (used locally)
   screenshotPath?: string;
+
+  // ✅ Used in production (Railway) – renders directly in browser
+  screenshotDataUrl?: string;
+
   details?: unknown;
 }
 
 export interface ScannedPage {
   url: string;
   title: string;
-  screenshotPath: string;
+
+  // Optional (local dev)
+  screenshotPath?: string;
+
+  // ✅ Main one used for UI rendering
+  screenshotDataUrl?: string;
 }
 
 export interface ScanSummary {
@@ -41,8 +52,10 @@ export interface ScanReport {
   scanId: string;
   startUrl: string;
   scannedAt: string;
+
   summary: ScanSummary;
   pages: ScannedPage[];
   issues: ScanIssue[];
+
   reportPath: string;
 }

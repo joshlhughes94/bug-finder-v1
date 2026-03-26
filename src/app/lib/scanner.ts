@@ -99,7 +99,6 @@ export async function runScan(
     });
   };
 
-  // Console errors
   page.on("console", (msg: ConsoleMessage) => {
     if (msg.type() === "error") {
       addIssue({
@@ -112,7 +111,6 @@ export async function runScan(
     }
   });
 
-  // Failed requests
   page.on("requestfailed", (request: Request) => {
     const failedUrl = request.url();
 
@@ -162,18 +160,22 @@ export async function runScan(
         const filePath = path.join(screenshotsDir, fileName);
         const publicPath = `/screenshots/${fileName}`;
 
-        await page.screenshot({
+        const screenshotBuffer = await page.screenshot({
           path: filePath,
           fullPage: true,
         });
+
+        const screenshotDataUrl = `data:image/png;base64,${Buffer.from(
+          screenshotBuffer
+        ).toString("base64")}`;
 
         pages.push({
           url: nextUrl,
           title: title || nextUrl,
           screenshotPath: publicPath,
+          screenshotDataUrl,
         });
 
-        // Accessibility (axe)
         try {
           await page.addScriptTag({ content: axe.source });
 
@@ -194,6 +196,7 @@ export async function runScan(
                 title: v.id,
                 message: v.description,
                 screenshotPath: publicPath,
+                screenshotDataUrl,
               });
             }
           } else {
@@ -204,6 +207,7 @@ export async function runScan(
               title: "Accessibility scan skipped",
               message: "axe-core was not available on this page.",
               screenshotPath: publicPath,
+              screenshotDataUrl,
             });
           }
         } catch (error) {
@@ -217,10 +221,10 @@ export async function runScan(
                 ? error.message
                 : "Unknown accessibility error",
             screenshotPath: publicPath,
+            screenshotDataUrl,
           });
         }
 
-        // Crawl links
         const links = await page.$$eval("a[href]", (anchors) =>
           anchors.map((a) => (a as HTMLAnchorElement).href)
         );
