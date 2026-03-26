@@ -1,3 +1,5 @@
+"use client";
+
 import type { ScanIssue, ScanReport } from "@/app/lib/types";
 
 type Props = {
@@ -277,6 +279,22 @@ function buildExecutiveSummary(
   return parts.join(" ");
 }
 
+function downloadReport(report: ScanReport) {
+  const fileName = `${report.scanId}.json`;
+  const blob = new Blob([JSON.stringify(report, null, 2)], {
+    type: "application/json",
+  });
+
+  const url = window.URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(url);
+}
+
 export default function ScanResults({ report }: Props) {
   const groups = groupIssues(report.issues);
   const topFindings = getTopFindings(groups);
@@ -315,6 +333,10 @@ export default function ScanResults({ report }: Props) {
             <p>{groups.filter((g) => g.severity === "high").length}</p>
           </div>
         </div>
+
+        <button onClick={() => downloadReport(report)} style={{ marginTop: 16 }}>
+          Download report
+        </button>
 
         <p className="muted" style={{ marginTop: 16 }}>
           Scan ID: {report.scanId}
@@ -412,13 +434,13 @@ export default function ScanResults({ report }: Props) {
                         URL: {issue.url}
                       </p>
                       <p>{issue.message}</p>
-                    {(issue.screenshotDataUrl || issue.screenshotPath) ? (
-                      <img
-                        className="screenshot"
-                        src={issue.screenshotDataUrl || issue.screenshotPath}
-                        alt={`Issue screenshot for ${issue.url}`}
-                      />
-                    ) : null}
+                      {(issue.screenshotDataUrl || issue.screenshotPath) ? (
+                        <img
+                          className="screenshot"
+                          src={issue.screenshotDataUrl || issue.screenshotPath}
+                          alt={`Issue screenshot for ${issue.url}`}
+                        />
+                      ) : null}
                     </div>
                   ))}
                 </div>
