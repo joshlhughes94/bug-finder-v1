@@ -8,13 +8,15 @@ body {
 
 .page {
   padding: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 /* LAYOUT */
 .layout {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
-  gap: 40px;
+  gap: 64px;
   align-items: start;
 }
 
@@ -22,6 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 18px;
+  padding-right: 10px;
 }
 
 .brand {
@@ -154,7 +157,7 @@ h2 {
   height: 84vh;
   overflow-y: auto;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08); /* 👈 stronger */
 }
 
 .results-preview {
