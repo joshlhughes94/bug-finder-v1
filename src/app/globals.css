@@ -1,3 +1,4 @@
+/* BASE */
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -9,6 +10,7 @@ body {
   padding: 40px;
 }
 
+/* LAYOUT */
 .layout {
   display: grid;
   grid-template-columns: 1fr 1.15fr;
@@ -62,6 +64,7 @@ h2 {
   line-height: 1.6;
 }
 
+/* FORM */
 .form {
   background: #ffffff;
   padding: 18px;
@@ -69,32 +72,47 @@ h2 {
   border: 1px solid #e5e7eb;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
   box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
+  width: 100%;
+  min-width: 0;
+}
+
+/* 🔥 CRITICAL FIX */
+.form *,
+.form *::before,
+.form *::after {
+  box-sizing: border-box;
 }
 
 .form label {
   font-size: 0.95rem;
   font-weight: 600;
   color: #0f172a;
+  margin-bottom: 4px;
 }
 
-input {
+/* INPUT */
+.form input {
+  display: block;
+  width: 100%;
+  max-width: 100%;
   padding: 14px 16px;
   border-radius: 12px;
   border: 1px solid #d1d5db;
-  width: 100%;
   font-size: 1rem;
   background: #fff;
 }
 
-input:focus {
+.form input:focus {
   outline: none;
   border-color: #3b82f6;
   box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.12);
 }
 
-button {
+/* BUTTON */
+.form button {
+  width: 100%;
   background: linear-gradient(135deg, #3b82f6, #2563eb);
   color: white;
   padding: 14px 18px;
@@ -106,12 +124,12 @@ button {
   transition: 0.2s ease;
 }
 
-button:hover {
+.form button:hover {
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(37, 99, 235, 0.2);
 }
 
-button:disabled {
+.form button:disabled {
   opacity: 0.7;
   cursor: not-allowed;
   transform: none;
@@ -191,7 +209,7 @@ button:disabled {
   line-height: 1.55;
 }
 
-/* REAL REPORT STYLING */
+/* REPORT */
 .card {
   background: #ffffff;
   border-radius: 18px;
@@ -218,6 +236,7 @@ button:disabled {
   font-weight: 500;
 }
 
+/* SUMMARY */
 .summary-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -236,16 +255,15 @@ button:disabled {
   font-size: 0.82rem;
   color: #64748b;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
 }
 
 .summary-box p {
   margin: 0;
   font-size: 2rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
 }
 
+/* LISTS */
 .issue-list,
 .page-list {
   display: flex;
@@ -261,23 +279,12 @@ button:disabled {
   background: #ffffff;
 }
 
-.issue-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 10px;
-}
-
+/* BADGES */
 .badge {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.78rem;
   font-weight: 700;
-  white-space: nowrap;
 }
 
 .badge.high {
@@ -296,43 +303,12 @@ button:disabled {
   color: #166534;
 }
 
-.meta {
-  color: #64748b;
-  font-size: 0.9rem;
-  line-height: 1.6;
-}
-
-.code {
-  display: block;
-  width: 100%;
-  overflow-x: auto;
-  white-space: pre-wrap;
-  word-break: break-word;
-  background: #f8fafc;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  padding: 12px;
-  margin-top: 12px;
-  color: #0f172a;
-  font-size: 0.88rem;
-}
-
+/* IMAGE */
 .screenshot {
   width: 100%;
   margin-top: 14px;
   border-radius: 14px;
   border: 1px solid #e5e7eb;
-  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06);
-}
-
-details {
-  border-top: 1px solid #eef2f7;
-  padding-top: 12px;
-}
-
-summary {
-  cursor: pointer;
-  font-weight: 600;
 }
 
 /* RESPONSIVE */
@@ -343,7 +319,6 @@ summary {
 
   .right {
     height: auto;
-    max-height: none;
   }
 }
 
