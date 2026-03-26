@@ -1,14 +1,20 @@
+"use client";
+
+import { useState } from "react";
 import Image from "next/image";
 import ScanForm from "@/components/ScanForm";
+import ScanResults from "@/components/ScanResults";
+import type { ScanReport } from "@/app/lib/types";
 
 export default function HomePage() {
+  const [report, setReport] = useState<ScanReport | null>(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
   return (
     <main className="page">
       <div className="layout">
-
-        {/* LEFT SIDE */}
         <div className="left">
-
           <div className="brand">
             <Image
               src="/logo.png"
@@ -32,52 +38,63 @@ export default function HomePage() {
             recommended actions.
           </p>
 
-          <ScanForm />
+          <ScanForm
+            setReport={setReport}
+            setLoading={setLoading}
+            setError={setError}
+          />
 
+          {error ? <p className="error">{error}</p> : null}
         </div>
 
-        {/* RIGHT SIDE */}
         <div className="right">
-
-          <div className="results-preview">
-
-            <div className="preview-card">
-              <p className="small">Health score</p>
-              <h3>92/100</h3>
-              <span className="badge good">Good</span>
-            </div>
-
-            <div className="preview-card">
-              <p className="small">What appears here</p>
-              <ul>
-                <li>Executive summary</li>
-                <li>Key findings</li>
-                <li>Grouped issues</li>
-                <li>Screenshots</li>
-                <li>Recommended actions</li>
-              </ul>
-            </div>
-
-            <div className="preview-card">
-              <p className="small">Example issue</p>
-
-              <div className="issue">
-                <strong>Broken resource</strong>
-                <span className="badge high">High</span>
-                <p>Missing assets may affect rendering.</p>
-              </div>
-
-              <div className="issue">
-                <strong>Auth required</strong>
-                <span className="badge medium">Medium</span>
-                <p>Some pages need login.</p>
+          {loading ? (
+            <div className="results-preview">
+              <div className="preview-card">
+                <p className="small">Scan in progress</p>
+                <h3>Scanning...</h3>
+                <span className="badge good">Please wait</span>
               </div>
             </div>
+          ) : report ? (
+            <ScanResults report={report} />
+          ) : (
+            <div className="results-preview">
+              <div className="preview-card">
+                <p className="small">Health score</p>
+                <h3>92/100</h3>
+                <span className="badge good">Good</span>
+              </div>
 
-          </div>
+              <div className="preview-card">
+                <p className="small">What appears here</p>
+                <ul>
+                  <li>Executive summary</li>
+                  <li>Key findings</li>
+                  <li>Grouped issues</li>
+                  <li>Screenshots</li>
+                  <li>Recommended actions</li>
+                </ul>
+              </div>
 
+              <div className="preview-card">
+                <p className="small">Example issue</p>
+
+                <div className="issue">
+                  <strong>Broken resource</strong>
+                  <span className="badge high">High</span>
+                  <p>Missing assets may affect rendering.</p>
+                </div>
+
+                <div className="issue">
+                  <strong>Auth required</strong>
+                  <span className="badge medium">Medium</span>
+                  <p>Some pages need login.</p>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
-
       </div>
     </main>
   );
