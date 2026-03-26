@@ -1,0 +1,32 @@
+{
+  "scanId": "scan_2026-03-26_14-12-09-671",
+  "startUrl": "https://demosauce.com",
+  "scannedAt": "2026-03-26T14:12:40.179Z",
+  "summary": {
+    "pagesScanned": 0,
+    "totalIssues": 2,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+  },
+  "pages": [],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_14-12-09-671_1",
+      "type": "page_load",
+      "severity": "high",
+      "url": "https://demosauce.com",
+      "title": "Page failed",
+      "message": "page.goto: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - navigating to \"https://demosauce.com/\", waiting until \"domcontentloaded\"\u001b[22m\n"
+    },
+    {
+      "id": "scan_2026-03-26_14-12-09-671_2",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://demosauce.com",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://demosauce.com/"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_14-12-09-671.json"
+}

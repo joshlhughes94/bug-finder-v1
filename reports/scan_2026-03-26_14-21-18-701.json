@@ -1,0 +1,279 @@
+{
+  "scanId": "scan_2026-03-26_14-21-18-701",
+  "startUrl": "https://the-internet.herokuapp.com/",
+  "scannedAt": "2026-03-26T14:21:26.672Z",
+  "summary": {
+    "pagesScanned": 5,
+    "totalIssues": 29,
+    "high": 0,
+    "medium": 24,
+    "low": 5
+  },
+  "pages": [
+    {
+      "url": "https://the-internet.herokuapp.com/",
+      "title": "The Internet",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_.png"
+    },
+    {
+      "url": "https://the-internet.herokuapp.com/abtest",
+      "title": "The Internet",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_abtest.png"
+    },
+    {
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "The Internet",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_add_remove_elements_.png"
+    },
+    {
+      "url": "https://the-internet.herokuapp.com/basic_auth",
+      "title": "https://the-internet.herokuapp.com/basic_auth",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_basic_auth.png"
+    },
+    {
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "The Internet",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_broken_images.png"
+    }
+  ],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_14-21-18-701_1",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534879875&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_2",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_3",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://the-internet.herokuapp.com/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_4",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/abtest",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534881617&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_5",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/abtest",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_6",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/abtest",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534879875&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_7",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/abtest",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_8",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://the-internet.herokuapp.com/abtest",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_abtest.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_9",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534881617&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_10",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_11",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534879875&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_12",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_13",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fadd_remove_elements%2F&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534882921&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_14",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_15",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://the-internet.herokuapp.com/add_remove_elements/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_add_remove_elements_.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_16",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/basic_auth",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_17",
+      "type": "navigation",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/basic_auth",
+      "title": "HTTP 401",
+      "message": "Page returned status 401"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_18",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://the-internet.herokuapp.com/basic_auth",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_basic_auth.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_19",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fadd_remove_elements%2F&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534882921&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_20",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_21",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fbroken_images&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534885492&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_22",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_23",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2Fabtest&g=298349752&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534881617&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_24",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_25",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://298279967.log.optimizely.com/event?a=298279967&d=298279967&y=false&x298349752=298291000&n=https%3A%2F%2Fthe-internet.herokuapp.com%2F&u=oeu1774534879873r0.5552289141980458&wxhr=true&t=1774534879875&f=298349752,318188263"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_26",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: net::ERR_NAME_NOT_RESOLVED"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_27",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_28",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: the server responded with a status of 404 (Not Found)"
+    },
+    {
+      "id": "scan_2026-03-26_14-21-18-701_29",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://the-internet.herokuapp.com/broken_images",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-21-18-701_https___the-internet_herokuapp_com_broken_images.png"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_14-21-18-701.json"
+}

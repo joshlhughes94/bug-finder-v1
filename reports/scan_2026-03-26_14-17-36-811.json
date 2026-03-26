@@ -1,0 +1,31 @@
+{
+  "scanId": "scan_2026-03-26_14-17-36-811",
+  "startUrl": "https://example.com",
+  "scannedAt": "2026-03-26T14:17:38.826Z",
+  "summary": {
+    "pagesScanned": 1,
+    "totalIssues": 1,
+    "high": 0,
+    "medium": 0,
+    "low": 1
+  },
+  "pages": [
+    {
+      "url": "https://example.com",
+      "title": "Example Domain",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-17-36-811_https___example_com.png"
+    }
+  ],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_14-17-36-811_1",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://example.com",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-17-36-811_https___example_com.png"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_14-17-36-811.json"
+}

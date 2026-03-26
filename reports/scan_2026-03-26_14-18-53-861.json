@@ -1,0 +1,151 @@
+{
+  "scanId": "scan_2026-03-26_14-18-53-861",
+  "startUrl": "https://www.bbc.co.uk/sport",
+  "scannedAt": "2026-03-26T14:19:07.729Z",
+  "summary": {
+    "pagesScanned": 5,
+    "totalIssues": 13,
+    "high": 0,
+    "medium": 8,
+    "low": 5
+  },
+  "pages": [
+    {
+      "url": "https://www.bbc.co.uk/sport",
+      "title": "BBC Sport - Scores, Fixtures, News - Live Sport",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_sport.png"
+    },
+    {
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+      "title": "What do I need to know about cookies?",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_usingthebbc_cookies_what-do-i-need-to-know-about-cookies_.png"
+    },
+    {
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "How can I change my BBC cookie settings?",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_usingthebbc_cookies_how-can-i-change-my-bbc-cookie-settings_.png"
+    },
+    {
+      "url": "https://www.bbc.co.uk/",
+      "title": "BBC - Home",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_.png"
+    },
+    {
+      "url": "https://www.bbc.co.uk/accessibility/",
+      "title": "Accessibility - BBC",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_accessibility_.png"
+    }
+  ],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_14-18-53-861_1",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://www.bbc.co.uk/sport",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_sport.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_2",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "POST https://uk-script.dotmetrics.net/BeaconEvent.dotmetrics"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_3",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/what-do-i-need-to-know-about-cookies/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_usingthebbc_cookies_what-do-i-need-to-know-about-cookies_.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_4",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "POST https://uk-script.dotmetrics.net/BeaconEvent.dotmetrics"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_5",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://www.bbc.co.uk/cookieoven?policy=000"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_6",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://www.bbc.com/cookieoven?policy=000"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_7",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "JavaScript error detected on page",
+      "message": "Failed to load resource: the server responded with a status of 400 ()"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_8",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "JavaScript error detected on page",
+      "message": "ERROR in messagingWithoutDetection:  RequestError: Server request error: 400  (https://cdn.privacy-mgmt.com/mms/v2/get_site_data?hasCsp=true&href=https%3A%2F%2Fwww.bbc.co.uk%2Fusingthebbc%2Fcookies%2Fhow-can-i-change-my-bbc-cookie-settings%2F&account_id=1786)\n    at XMLHttpRequest.<anonymous> (https://cdn.privacy-mgmt.com/unified/wrapperMessagingWithoutDetection.js:1:7137)"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_9",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://www.bbc.co.uk/usingthebbc/cookies/how-can-i-change-my-bbc-cookie-settings/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_usingthebbc_cookies_how-can-i-change-my-bbc-cookie-settings_.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_10",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "POST https://cdn.privacy-mgmt.com/wrapper/metrics/v1/custom-metrics"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_11",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://www.bbc.co.uk/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_12",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://www.bbc.co.uk/accessibility/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "POST https://uk-script.dotmetrics.net/BeaconEvent.dotmetrics"
+    },
+    {
+      "id": "scan_2026-03-26_14-18-53-861_13",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://www.bbc.co.uk/accessibility/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-18-53-861_https___www_bbc_co_uk_accessibility_.png"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_14-18-53-861.json"
+}

@@ -1,0 +1,335 @@
+{
+  "scanId": "scan_2026-03-26_14-36-32-646",
+  "startUrl": "https://automationexercise.com",
+  "scannedAt": "2026-03-26T14:36:44.561Z",
+  "summary": {
+    "pagesScanned": 5,
+    "totalIssues": 36,
+    "high": 0,
+    "medium": 31,
+    "low": 5
+  },
+  "pages": [
+    {
+      "url": "https://automationexercise.com",
+      "title": "Automation Exercise",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com.png"
+    },
+    {
+      "url": "https://automationexercise.com/",
+      "title": "Automation Exercise",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_.png"
+    },
+    {
+      "url": "https://automationexercise.com/products",
+      "title": "Automation Exercise - All Products",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_products.png"
+    },
+    {
+      "url": "https://automationexercise.com/view_cart",
+      "title": "Automation Exercise - Checkout",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_view_cart.png"
+    },
+    {
+      "url": "https://automationexercise.com/login",
+      "title": "Automation Exercise - Signup / Login",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_login.png"
+    }
+  ],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_14-36-32-646_1",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_2",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_3",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_4",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_5",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Abel'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_6",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Abel"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_7",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://automationexercise.com",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_8",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_9",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_10",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_11",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_12",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Abel'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_13",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Abel"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_14",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://automationexercise.com/",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_15",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/products",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/products' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_16",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/products",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_17",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/products",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/products' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_18",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/products",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_19",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/products",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/products' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Abel'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_20",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/products",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Abel"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_21",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://automationexercise.com/products",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_products.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_22",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET https://pagead2.googlesyndication.com/pagead/gen_204?id=plmetrics&cls=0.058&mls=0.040&nls=4&cas=0.000&nas=0&was=0.000&wls=0.058&tls=939.800&lcp=276&lcps=150000&cbt=5&mbt=5&nlt=1&nif=0&ifi=1&eid=95386648%2C42533293%2C95386338%2C95386957%2C95340253%2C95340255&top=1&pvsid=6211662782421838"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_23",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/view_cart' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_24",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_25",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/view_cart' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_26",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_27",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/view_cart' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Abel'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_28",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Abel"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_29",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://automationexercise.com/view_cart",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_view_cart.png"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_30",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/login",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/login' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_31",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/login",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Roboto:400,300,400italic,500,700,100"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_32",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/login",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/login' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_33",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/login",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_34",
+      "type": "console_error",
+      "severity": "medium",
+      "url": "https://automationexercise.com/login",
+      "title": "JavaScript error detected on page",
+      "message": "Mixed Content: The page at 'https://automationexercise.com/login' was loaded over HTTPS, but requested an insecure stylesheet 'http://fonts.googleapis.com/css?family=Abel'. This request has been blocked; the content must be served over HTTPS."
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_35",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://automationexercise.com/login",
+      "title": "Failed network request (may impact functionality)",
+      "message": "GET http://fonts.googleapis.com/css?family=Abel"
+    },
+    {
+      "id": "scan_2026-03-26_14-36-32-646_36",
+      "type": "accessibility",
+      "severity": "low",
+      "url": "https://automationexercise.com/login",
+      "title": "Accessibility scan skipped",
+      "message": "axe-core was not available on this page.",
+      "screenshotPath": "/screenshots/scan_2026-03-26_14-36-32-646_https___automationexercise_com_login.png"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_14-36-32-646.json"
+}

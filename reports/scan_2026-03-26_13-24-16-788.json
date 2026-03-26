@@ -1,0 +1,38 @@
+{
+  "scanId": "scan_2026-03-26_13-24-16-788",
+  "startUrl": "https://bbc.co.uk",
+  "scannedAt": "2026-03-26T13:24:24.070Z",
+  "summary": {
+    "pagesScanned": 1,
+    "totalIssues": 2,
+    "high": 1,
+    "medium": 1,
+    "low": 0
+  },
+  "pages": [
+    {
+      "url": "https://bbc.co.uk",
+      "title": "BBC - Home",
+      "screenshotPath": "/screenshots/scan_2026-03-26_13-24-16-788_https___bbc_co_uk.png"
+    }
+  ],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_13-24-16-788_1",
+      "type": "failed_request",
+      "severity": "medium",
+      "url": "https://bbc.co.uk",
+      "title": "Request failed",
+      "message": "GET https://ping.chartbeat.net/ping?h=bbc.co.uk&p=%2F&u=DxM0SuCkJvxgDwHLRZ&d=bbc.co.uk&g=50924&g0=No%20Section&g1=No%20Author&n=1&f=00001&c=0&x=0&m=0&y=8381&o=1440&w=900&j=45&R=1&W=0&I=0&E=0&e=0&r=&PA=https%3A%2F%2Fwww.bbc.co.uk%2F&b=5895&t=DaTGsrWXXlTDYEVrVyOvbZDYxHl9&V=150&i=BBC%20-%20Home&tz=0&sn=1&sv=D6cn8ADNQY5PBKolSIDsu200Q0nCB&sr=external&sd=1&im=067b2ffa&_"
+    },
+    {
+      "id": "scan_2026-03-26_13-24-16-788_2",
+      "type": "page_load",
+      "severity": "high",
+      "url": "https://bbc.co.uk",
+      "title": "Page failed",
+      "message": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'run')\n    at eval (eval at evaluate (:290:30), <anonymous>:6:32)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_13-24-16-788.json"
+}

@@ -1,0 +1,30 @@
+{
+  "scanId": "scan_2026-03-26_13-23-04-044",
+  "startUrl": "https://example.com",
+  "scannedAt": "2026-03-26T13:23:07.287Z",
+  "summary": {
+    "pagesScanned": 1,
+    "totalIssues": 1,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "pages": [
+    {
+      "url": "https://example.com",
+      "title": "Example Domain",
+      "screenshotPath": "/screenshots/scan_2026-03-26_13-23-04-044_https___example_com.png"
+    }
+  ],
+  "issues": [
+    {
+      "id": "scan_2026-03-26_13-23-04-044_1",
+      "type": "page_load",
+      "severity": "high",
+      "url": "https://example.com",
+      "title": "Page failed",
+      "message": "page.evaluate: TypeError: Cannot read properties of undefined (reading 'run')\n    at eval (eval at evaluate (:290:30), <anonymous>:6:32)\n    at UtilityScript.evaluate (<anonymous>:292:16)\n    at UtilityScript.<anonymous> (<anonymous>:1:44)"
+    }
+  ],
+  "reportPath": "/Users/joshuahughes/bug-finder-v1/reports/scan_2026-03-26_13-23-04-044.json"
+}
