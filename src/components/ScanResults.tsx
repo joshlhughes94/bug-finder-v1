@@ -412,13 +412,13 @@ export default function ScanResults({ report }: Props) {
                         URL: {issue.url}
                       </p>
                       <p>{issue.message}</p>
-                      {issue.screenshotPath ? (
-                        <img
-                          className="screenshot"
-                          src={issue.screenshotPath}
-                          alt={`Issue screenshot for ${issue.url}`}
-                        />
-                      ) : null}
+                    {(issue.screenshotDataUrl || issue.screenshotPath) ? (
+                      <img
+                        className="screenshot"
+                        src={issue.screenshotDataUrl || issue.screenshotPath}
+                        alt={`Issue screenshot for ${issue.url}`}
+                      />
+                    ) : null}
                     </div>
                   ))}
                 </div>
@@ -436,11 +436,13 @@ export default function ScanResults({ report }: Props) {
             <div className="page-card" key={page.url}>
               <strong>{page.title}</strong>
               <p className="meta">{page.url}</p>
-              <img
-                className="screenshot"
-                src={page.screenshotPath}
-                alt={`Screenshot of ${page.url}`}
-              />
+              {(page.screenshotDataUrl || page.screenshotPath) ? (
+                <img
+                  className="screenshot"
+                  src={page.screenshotDataUrl || page.screenshotPath}
+                  alt={`Screenshot of ${page.url}`}
+                />
+              ) : null}
             </div>
           ))}
         </div>
