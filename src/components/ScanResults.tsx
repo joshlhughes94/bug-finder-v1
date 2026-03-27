@@ -279,7 +279,7 @@ function buildExecutiveSummary(
   return parts.join(" ");
 }
 
-function downloadReport(report: ScanReport) {
+function downloadJSON(report: ScanReport) {
   const fileName = `${report.scanId}.json`;
   const blob = new Blob([JSON.stringify(report, null, 2)], {
     type: "application/json",
@@ -289,6 +289,189 @@ function downloadReport(report: ScanReport) {
   const link = document.createElement("a");
   link.href = url;
   link.download = fileName;
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+  window.URL.revokeObjectURL(url);
+}
+
+function downloadHTML(report: ScanReport, executiveSummary: string) {
+  const healthScore = calculateHealthScore(groupIssues(report.issues));
+  const healthLabel = getHealthLabel(healthScore);
+
+  const html = `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Scandly Report - ${report.scanId}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 24px;
+      background: #f8fafc;
+      color: #0f172a;
+      line-height: 1.6;
+    }
+    .brand {
+      margin-bottom: 24px;
+    }
+    .brand h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+    .brand p {
+      margin: 4px 0 0;
+      color: #2563eb;
+      font-weight: 600;
+    }
+    .card {
+      background: white;
+      padding: 18px;
+      border-radius: 12px;
+      margin-bottom: 18px;
+      border: 1px solid #e5e7eb;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+    .summary-box {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .summary-box h3 {
+      margin: 0 0 8px;
+      font-size: 12px;
+      color: #64748b;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .summary-box p {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 800;
+    }
+    .badge {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-top: 8px;
+    }
+    .high { background: #fee2e2; color: #b91c1c; }
+    .medium { background: #fef3c7; color: #92400e; }
+    .low { background: #dcfce7; color: #166534; }
+    .meta {
+      color: #64748b;
+      font-size: 14px;
+    }
+    .issue {
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      padding: 14px;
+      margin-top: 12px;
+      background: #fff;
+    }
+    img {
+      width: 100%;
+      border-radius: 8px;
+      margin-top: 10px;
+      border: 1px solid #e5e7eb;
+    }
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="brand">
+    <h1>Scandly</h1>
+    <p>Scan. Detect. Fix.</p>
+  </div>
+
+  <div class="card">
+    <h2>Scan summary</h2>
+    <div class="grid">
+      <div class="summary-box">
+        <h3>Health score</h3>
+        <p>${healthScore}/100</p>
+        <span class="badge ${getHealthSeverity(healthScore)}">${healthLabel}</span>
+      </div>
+      <div class="summary-box">
+        <h3>Pages scanned</h3>
+        <p>${report.summary.pagesScanned}</p>
+      </div>
+      <div class="summary-box">
+        <h3>Issue groups</h3>
+        <p>${groupIssues(report.issues).length}</p>
+      </div>
+      <div class="summary-box">
+        <h3>High severity groups</h3>
+        <p>${groupIssues(report.issues).filter((g) => g.severity === "high").length}</p>
+      </div>
+    </div>
+
+    <p class="meta" style="margin-top:16px;">
+      Scan ID: ${report.scanId}<br />
+      Start URL: ${report.startUrl}<br />
+      Scanned at: ${report.scannedAt}
+    </p>
+  </div>
+
+  <div class="card">
+    <h2>Executive summary</h2>
+    <p>${executiveSummary}</p>
+  </div>
+
+  <div class="card">
+    <h2>Key findings</h2>
+    ${getTopFindings(groupIssues(report.issues))
+      .map(
+        (group) => `
+      <div class="issue">
+        <strong>${group.title}</strong>
+        <span class="badge ${group.severity}">${group.severity}</span>
+        <p>${group.summary}</p>
+        <p class="meta">Occurrences: ${group.count} · Pages affected: ${group.urls.length}</p>
+        <p class="meta"><strong>Recommended action:</strong> ${getRecommendedAction(group.key)}</p>
+      </div>
+    `
+      )
+      .join("")}
+  </div>
+
+  <div class="card">
+    <h2>Scanned pages</h2>
+    ${report.pages
+      .map(
+        (page) => `
+      <div class="issue">
+        <strong>${page.title}</strong>
+        <p class="meta">${page.url}</p>
+        ${
+          page.screenshotDataUrl || page.screenshotPath
+            ? `<img src="${page.screenshotDataUrl || page.screenshotPath}" alt="Screenshot of ${page.url}" />`
+            : ""
+        }
+      </div>
+    `
+      )
+      .join("")}
+  </div>
+</body>
+</html>
+`;
+
+  const blob = new Blob([html], { type: "text/html" });
+  const url = window.URL.createObjectURL(blob);
+  const link = document.createElement("a");
+  link.href = url;
+  link.download = `${report.scanId}.html`;
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
@@ -334,9 +517,12 @@ export default function ScanResults({ report }: Props) {
           </div>
         </div>
 
-        <button onClick={() => downloadReport(report)} style={{ marginTop: 16 }}>
-          Download report
-        </button>
+        <div style={{ marginTop: 16, display: "flex", gap: 10, flexWrap: "wrap" }}>
+          <button onClick={() => downloadJSON(report)}>Download JSON</button>
+          <button onClick={() => downloadHTML(report, executiveSummary)}>
+            Download HTML
+          </button>
+        </div>
 
         <p className="muted" style={{ marginTop: 16 }}>
           Scan ID: {report.scanId}
