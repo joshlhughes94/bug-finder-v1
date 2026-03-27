@@ -40,17 +40,19 @@ body {
 .brand-left {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 16px;
 }
 
 .logo {
-  width: 40px;
-  height: 40px;
+  width: 64px;   
+  height: 64px;
   object-fit: contain;
+  display: block;
+  transform: translateY(1px);
 }
 
 .brand-name {
-  font-size: 1.7rem;
+  font-size: 1.9rem;
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #0f172a;
