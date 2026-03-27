@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import ScanForm from "@/components/ScanForm";
 import ScanResults from "@/components/ScanResults";
 import type { ScanReport } from "@/app/lib/types";
@@ -15,17 +14,13 @@ export default function HomePage() {
     <main className="page">
       <div className="layout">
         <div className="left">
-          <div className="brand">
-            <Image
-              src="/logo.png"
-              alt="Scandly logo"
-              width={56}
-              height={56}
-            />
-            <div>
-              <p className="tagline">Scan. Detect. Fix.</p>
-              <h1>Scandly</h1>
+          <div className="brand-bar">
+            <div className="brand-left">
+              <img src="/logo.png" alt="Scandly logo" className="logo" />
+              <span className="brand-name">Scandly</span>
             </div>
+
+            <span className="brand-tagline">Scan. Detect. Fix.</span>
           </div>
 
           <p className="label">Website health scanner</p>
